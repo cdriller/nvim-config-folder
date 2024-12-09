@@ -1,7 +1,12 @@
 return {
   "folke/which-key.nvim",
   event = "VeryLazy",
-  opts = {},
+  opts = {
+    keys = {
+      scroll_down = "<down>", -- binding to scroll down inside the popup
+      scroll_up = "<up>", -- binding to scroll up inside the popup
+    },
+  },
   keys = {
     {
       "<leader>?",

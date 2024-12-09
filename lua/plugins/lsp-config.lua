@@ -11,6 +11,9 @@ return {
         "gopls",
         "phpactor",
         "ts_ls",
+        -- "hls", -- installed via ghcup
+        "pylsp",
+        -- "pyright", installed via pip in the appropriate env
       },
     },
   },
@@ -42,9 +45,19 @@ return {
         capabilities = capabilities,
       })
 
+      -- lspconfig.pylsp.setup({
+      -- 	capabilities = capabilities,
+      -- })
       lspconfig.pyright.setup({
         capabilities = capabilities,
+      })
 
+      lspconfig.hls.setup({
+        capabilities = capabilities,
+      })
+
+      lspconfig.prolog_ls.setup({
+        capabilities = capabilities,
       })
 
       -- lsp keymaps

@@ -7,6 +7,13 @@ return {
 	config = function()
 		require("flutter-tools").setup({
 			fvm = true,
+			debugger = {
+				enabled = true,
+        register_configuration = function(_)
+          require("dap").configurations.dart = {}
+          require("dap.ext.vscode").load_launchjs()
+        end
+			},
 		})
 
 		local telescope = require("telescope")
